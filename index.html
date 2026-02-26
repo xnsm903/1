@@ -1,0 +1,558 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔚蓝档案日光工作室 - 官方网站</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#60A5FA',
+                        accent: '#93C5FD',
+                        dark: '#1E3A8A',
+                        light: '#EFF6FF'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .text-shadow-lg {
+                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+            }
+            .bg-gradient-blue {
+                background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 50%, #93C5FD 100%);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+            }
+            .glass-effect {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="glass-effect sticky top-0 z-50 py-4 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/8db6a96ca70943daa3ad64e74563d0ec~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=20260224112732558EDB43686E6D6DA2F0&amp;rrcfp=e75484ac&amp;x-expires=1772508452&amp;x-signature=B3h%2F7psuloklwDm93RAsPUCZGAA%3D" alt="蔚蓝档案日光工作室" class="h-10 w-10">
+                <h1 class="text-xl md:text-2xl font-bold text-shadow">蔚蓝档案日光工作室</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-accent transition-colors">首页</a>
+                <a href="#about" class="hover:text-accent transition-colors">关于我们</a>
+                <a href="#members" class="hover:text-accent transition-colors">成员作品</a>
+                <a href="#join" class="hover:text-accent transition-colors">加入我们</a>
+                <a href="#rules" class="hover:text-accent transition-colors">社团规章</a>
+            </div>
+            <button class="md:hidden text-2xl" id="mobile-menu-button">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-dark rounded-lg p-4 absolute left-0 right-0 mx-4">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-accent transition-colors">首页</a>
+                <a href="#about" class="hover:text-accent transition-colors">关于我们</a>
+                <a href="#members" class="hover:text-accent transition-colors">成员作品</a>
+                <a href="#join" class="hover:text-accent transition-colors">加入我们</a>
+                <a href="#rules" class="hover:text-accent transition-colors">社团规章</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="py-12 md:py-24 px-6 md:px-12">
+        <div class="container mx-auto text-center">
+            <div class="flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/952a89abdbe34069a9315f5090a8f9a3~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=20260224113114D44175C08012AD8E5A1D&amp;rrcfp=e75484ac&amp;x-expires=1772508674&amp;x-signature=hu3KK7KIgjWehTyP%2BLE8aBvquYQ%3D" alt="蔚蓝档案日光工作室" class="h-32 w-32 mb-6 animate-float">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow-lg">蔚蓝档案日光工作室</h1>
+                <p class="text-xl md:text-2xl text-accent mb-8 max-w-2xl">专注于《蔚蓝档案》二创内容制作的非盈利性同人创作团队</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#about" class="bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors shadow-lg">了解我们</a>
+                    <a href="#join" class="bg-transparent border-2 border-accent hover:bg-accent hover:text-dark font-bold py-3 px-6 rounded-full transition-colors shadow-lg">加入我们</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公告栏 -->
+    <section class="py-8 px-6 md:px-12 bg-dark bg-opacity-50">
+        <div class="container mx-auto">
+            <div class="glass-effect rounded-2xl p-6 md:p-8" data-aos="fade-up">
+                <div class="flex items-center mb-6">
+                    <i class="fa fa-bullhorn text-2xl mr-3 text-accent"></i>
+                    <h2 class="text-2xl md:text-3xl font-bold">📢 工作室公告</h2>
+                </div>
+                <div class="space-y-4" id="announcements">
+                    <div class="border-b border-blue-700 pb-4 announcement-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold hover:text-accent cursor-pointer transition-colors announcement-title">2026年3月招募开启</h3>
+                            <span class="text-sm text-accent">2026-02-24</span>
+                        </div>
+                        <div class="mt-2 hidden announcement-content">
+                            <p>我们将于2026年3月1日开启新一轮成员招募，欢迎各位热爱蔚蓝档案的创作者加入我们！招募方向包括插画、漫画、动画、音乐等多个领域。</p>
+                            <p class="mt-2">详情请关注后续公告或加入审核群咨询。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="border-b border-blue-700 pb-4 announcement-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold hover:text-accent cursor-pointer transition-colors announcement-title">工作室首次合作项目启动</h3>
+                            <span class="text-sm text-accent">2026-02-15</span>
+                        </div>
+                        <div class="mt-2 hidden announcement-content">
+                            <p>我们很高兴地宣布，工作室首个合作项目《基沃托斯的日常》正式启动！这是一部描绘游戏角色日常生活的同人漫画系列。</p>
+                            <p class="mt-2">预计将于3月中旬在B站和微博同步发布，敬请期待！</p>
+                        </div>
+                    </div>
+                    
+                    <div class="announcement-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold hover:text-accent cursor-pointer transition-colors announcement-title">工作室正式成立公告</h3>
+                            <span class="text-sm text-accent">2026-01-10</span>
+                        </div>
+                        <div class="mt-2 hidden announcement-content">
+                            <p>蔚蓝档案日光工作室于2026年1月10日正式成立！我们是一个由热爱蔚蓝档案的玩家组成的非盈利性同人创作团队。</p>
+                            <p class="mt-2">我们的作品形式多样，包括但不限于同人插画、漫画、动画、游戏、音乐、AI翻唱等。我们希望通过这些作品，展现基沃托斯世界的更多可能性，为玩家带来更多欢乐和感动。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <button id="more-announcements" class="text-accent hover:text-white transition-colors flex items-center mx-auto">
+                        <span>查看更多公告</span>
+                        <i class="fa fa-angle-down ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作室简介 -->
+    <section id="about" class="py-16 px-6 md:px-12">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">关于我们</h2>
+                <div class="w-24 h-1 bg-accent mx-auto" data-aos="fade-up" data-aos-delay="100"></div>
+            </div>
+            
+            <div class="glass-effect rounded-2xl p-6 md:p-8 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-lg mb-4">工作室成立于2026年1月，是一个专注于《蔚蓝档案》二创内容制作的非盈利性同人创作团队。我们由一群热爱蔚蓝档案的玩家组成，致力于为游戏社区创造更多优质的二创内容。</p>
+                
+                <p class="text-lg mb-4">我们的作品形式多样，包括但不限于同人插画、漫画、动画、游戏、音乐、AI翻唱等。我们希望通过这些作品，展现基沃托斯世界的更多可能性，为玩家带来更多欢乐和感动。</p>
+                
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-dark bg-opacity-50 rounded-xl p-5 text-center card-hover">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-paint-brush text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">创作自由</h3>
+                        <p>我们鼓励成员发挥创意，提供自由的创作环境和支持。</p>
+                    </div>
+                    
+                    <div class="bg-dark bg-opacity-50 rounded-xl p-5 text-center card-hover">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-users text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">团队协作</h3>
+                        <p>我们重视团队合作，共同完成高质量的二创作品。</p>
+                    </div>
+                    
+                    <div class="bg-dark bg-opacity-50 rounded-xl p-5 text-center card-hover">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-heart text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">热爱至上</h3>
+                        <p>我们因热爱而相聚，希望将这份热爱传递给更多人。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成员代表作展示 -->
+    <section id="members" class="py-16 px-6 md:px-12 bg-dark bg-opacity-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">成员代表作</h2>
+                <div class="w-24 h-1 bg-accent mx-auto" data-aos="fade-up" data-aos-delay="100"></div>
+                <p class="mt-4 text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">认识我们才华横溢的团队成员，欣赏他们的精彩作品</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 成员1 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/" target="_blank" class="block">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/cc40c8fda55b4c48ae69a1b2cdc1d2dd~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=202602240941121C5AD303B3C19169F8BC&amp;rrcfp=e75484ac&amp;x-expires=1772502073&amp;x-signature=6Ci0M7nvYFR3ZFb92CkXZ9UJV7A%3D" alt="陈某人28" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">陈某人28</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="https://www.bilibili.com/video/BV1nXcgzDEqX" target="_blank" class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-play-circle mr-2"></i>
+                                <span>代表作</span>
+                            </a>
+                            <a href="https://space.bilibili.com/" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成员2 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/" target="_blank" class="block">
+                            <img src="https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/d1ff8af166e946b18abb8e7830152092~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=20260224094032393B8CA14C5743B22192&amp;rrcfp=e75484ac&amp;x-expires=1772502032&amp;x-signature=4Gr1lPGkPHMDNhrpsya12U66OzY%3D" alt="最爱依蕾娜了" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">最爱依蕾娜了</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="https://www.bilibili.com/video/BV1tpfgBsEnr" target="_blank" class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-play-circle mr-2"></i>
+                                <span>代表作</span>
+                            </a>
+                            <a href="https://space.bilibili.com/" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成员3 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/" target="_blank" class="block">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/5facfdb7e61b4906afbe8c7ee77d7829~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=202602240959036A624DB6243F846F19A9&amp;rrcfp=e75484ac&amp;x-expires=1772503143&amp;x-signature=pC%2FWa%2BTOo2ZTSDxnJWZLHwL6XYk%3D" alt="-千梦琉璃-" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">-千梦琉璃-</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="https://www.bilibili.com/video/BV1wKFpzmEpd" target="_blank" class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-play-circle mr-2"></i>
+                                <span>代表作</span>
+                            </a>
+                            <a href="https://space.bilibili.com/" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成员4 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/" target="_blank" class="block">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/8163bff06c7444b780f66709fbb42ed9~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=2026022409580614DD8DE3EE5BE48B7C98&amp;rrcfp=e75484ac&amp;x-expires=1772503086&amp;x-signature=558DutdvfNeR6ncgMI34LPTVNmo%3D" alt="小杂渔" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">小杂渔</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="https://www.bilibili.com/video/BV12vZMBCEnN" target="_blank" class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-play-circle mr-2"></i>
+                                <span>代表作</span>
+                            </a>
+                            <a href="https://space.bilibili.com/" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成员5 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/" target="_blank" class="block">
+                            <img src="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/f2563f8bb302486eb002d4a91348c353~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=202602240959123B3067725CE90BB0FF31&amp;rrcfp=e75484ac&amp;x-expires=1772503153&amp;x-signature=8f6B65JWZttT0g6Y5TvOt0157QE%3D" alt="星海小型" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">星海小星</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="https://www.bilibili.com/video/BV1TuRdY2EFM" target="_blank" class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-play-circle mr-2"></i>
+                                <span>代表作</span>
+                            </a>
+                            <a href="https://space.bilibili.com/" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成员6 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/" target="_blank" class="block">
+                            <img src="https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/1318d4ef6e8b490282ba7bc751379a2e~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=202602241118448C8F8B10E67FBA8E53CB&amp;rrcfp=e75484ac&amp;x-expires=1772507924&amp;x-signature=1m9n33DTqcb9%2FFChai6QrjQ8lFE%3D" alt="Daydream_315" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">Daydream_315</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <button class="bg-gray-600 cursor-not-allowed text-white py-2 px-4 rounded-full flex items-center">
+                                <i class="fa fa-gamepad mr-2"></i>
+                                <span>开发中</span>
+                            </button>
+                            <a href="https://space.bilibili.com/" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成员7 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/1827525413" target="_blank" class="block">
+                            <img src="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/84c4324b995f4008bf4bd1087c6152f2~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=2026022411540198362157A4EEB2B50E4E&amp;rrcfp=e75484ac&amp;x-expires=1772510041&amp;x-signature=Ub59384TBdzVhPaK7NbK1oNgAXw%3D" alt="长空同志" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">长空同志</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="https://www.bilibili.com/video/BV1NVkHBGEbp" target="_blank" class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-play-circle mr-2"></i>
+                                <span>代表作</span>
+                            </a>
+                            <a href="https://space.bilibili.com/1827525413" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成员8 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="500">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/472280991" target="_blank" class="block">
+                            <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/79fa5c1ec381428391f6bb93a19f5dae~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=202602241157206EA36621032660B377DF&amp;rrcfp=03245832&amp;x-expires=1772510244&amp;x-signature=XFpJrXNVg5B4MNTXsh10U3prBkA%3D" alt="工农-十月" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">工农-十月</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="https://www.bilibili.com/video/BV1tC8qzCEPA" target="_blank" class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-play-circle mr-2"></i>
+                                <span>代表作</span>
+                            </a>
+                            <a href="https://space.bilibili.com/472280991" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成员9 -->
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="600">
+                    <div class="p-6 text-center">
+                        <a href="https://space.bilibili.com/3546919607470552" target="_blank" class="block">
+                            <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/9c6890db5ce34441a1915737bb7f21d4~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=2026022413251852D9E8C1343CE46E4F72&amp;rrcfp=e75484ac&amp;x-expires=1772515518&amp;x-signature=SaeGQfpfpFya68SFtS7wzhu9BB0%3D" alt="天蝎虎熙" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        </a>
+                        <h3 class="text-xl font-bold mb-2">天蝎虎熙</h3>
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <a href="https://www.bilibili.com/video/BV1i8bHzVET9" target="_blank" class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-play-circle mr-2"></i>
+                                <span>代表作</span>
+                            </a>
+                            <a href="https://space.bilibili.com/3546919607470552" target="_blank" class="bg-transparent border border-accent hover:bg-accent hover:text-dark text-white py-2 px-4 rounded-full transition-colors flex items-center">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>B站空间</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 群号与加入方式 -->
+    <section id="join" class="py-16 px-6 md:px-12">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">加入我们</h2>
+                <div class="w-24 h-1 bg-accent mx-auto" data-aos="fade-up" data-aos-delay="100"></div>
+            </div>
+            
+            <div class="glass-effect rounded-2xl p-8 max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="md:w-1/2 text-center">
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 inline-block">
+                        <div class="text-4xl font-bold text-accent mb-2">959345026</div>
+                        <p class="text-sm text-accent">审核群号</p>
+                    </div>
+                    <p class="mt-6 text-lg">扫码或输入群号申请加入，备注"二创"</p>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-48 h-48 bg-white rounded-lg p-2">
+                        <img src="https://p26-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/4f905971996b45b6aee3225a5d467a49~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=20260224112630DA9899B42DA04470EEA1&amp;rrcfp=e75484ac&amp;x-expires=1772508391&amp;x-signature=S7n2g1XMQoxpiJ%2FTZSEYDk0Tmow%3D" alt="蔚蓝档案日光工作室审核群二维码" class="w-full h-full object-contain">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="300">
+                <p class="text-lg">若想加入工作室，请先加入审核群，通过后可加入工作群。</p>
+                <p class="mt-2 text-accent">我们期待你的加入，一起创造更多精彩内容！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark py-8 px-6 md:px-12">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/f1492a592e454a949cc28e089d10b5af~tplv-a9rns2rl98-image.image?lk3s=8e244e95&amp;rcl=202602241326041A5D84731BE1CB8EDF4D&amp;rrcfp=e75484ac&amp;x-expires=1772515564&amp;x-signature=rJadk5S8xSuwLTvqDotFAd%2FMXnA%3D" alt="蔚蓝档案日光工作室" class="h-8 w-8">
+                        <span class="text-lg font-semibold">蔚蓝档案日光工作室</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-2">© 2026 蔚蓝档案日光工作室 版权所有</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <a href="rules.html" id="rules" class="text-blue-400 hover:text-blue-300 transition-colors underline mb-2">📜 社团规章</a>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent hover:text-white transition-colors">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-accent hover:text-white transition-colors">
+                            <i class="fa fa-bilibili text-xl"></i>
+                        </a>
+                        <a href="#" class="text-accent hover:text-white transition-colors">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 公告详情模态框 -->
+    <div id="announcement-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+        <div class="bg-dark rounded-2xl p-6 max-w-2xl w-full mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                <button id="close-modal" class="text-2xl hover:text-accent transition-colors">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-date" class="text-sm text-accent mb-4"></div>
+            <div id="modal-content" class="prose prose-invert max-w-none"></div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化AOS动画库
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // 移动端菜单切换
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // 公告展开/收起功能
+            const announcementTitles = document.querySelectorAll('.announcement-title');
+            
+            announcementTitles.forEach(title => {
+                title.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('hidden');
+                    
+                    // 如果内容很长，考虑使用模态框
+                    if (content.textContent.length > 200) {
+                        content.classList.add('hidden');
+                        
+                        // 填充模态框内容
+                        document.getElementById('modal-title').textContent = this.textContent;
+                        document.getElementById('modal-date').textContent = this.parentElement.querySelector('.text-sm').textContent;
+                        document.getElementById('modal-content').innerHTML = content.innerHTML;
+                        
+                        // 显示模态框
+                        document.getElementById('announcement-modal').classList.remove('hidden');
+                    }
+                });
+            });
+            
+            // 关闭模态框
+            document.getElementById('close-modal').addEventListener('click', function() {
+                document.getElementById('announcement-modal').classList.add('hidden');
+            });
+            
+            // 点击模态框外部关闭
+            document.getElementById('announcement-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.add('hidden');
+                }
+            });
+            
+            // 更多公告按钮
+            document.getElementById('more-announcements').addEventListener('click', function() {
+                alert('更多公告功能即将上线，敬请期待！');
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // 如果是移动端，点击后关闭菜单
+                        if (window.innerWidth < 768) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body></html>
